@@ -78,8 +78,6 @@ namespace BisonCorp
             String path = Path.Combine(carpetaFacturas, "Factura_" + tb_factura.Text + "_" + tb_nombre.Text + ".pdf");
             String imagepath = Path.Combine(DirectorioDocumentos, "Geo.jpeg");
 
-            DataTable datos = cn.DatosFacturacion(Int32.Parse(tb_factura.Text));
-
             double subtotal = 0;
 
             if (!Directory.Exists(carpetaFacturas))
@@ -89,6 +87,8 @@ namespace BisonCorp
 
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
+                DataTable datos = cn.DatosFacturacion(Int32.Parse(tb_factura.Text));
+
                 PdfWriter writer = new PdfWriter(path);
                 PdfDocument PDF = new PdfDocument(writer);
                 Document document = new Document(PDF);

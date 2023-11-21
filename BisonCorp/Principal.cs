@@ -72,6 +72,13 @@ namespace BisonCorp
         private void bt_AgregarProdcuto_Click(object sender, EventArgs e)
         {
             var resultado = cn.consultainventario(tb_CodigoProducto.Text);
+
+            if (resultado == null || resultado.Item1 == "NULL" || resultado.Item2 == "NULL")
+            {
+                MessageBox.Show("No se encontró el producto en el inventario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             DataRow row = dt.NewRow();
 
             row["Codigo"] = tb_CodigoProducto.Text;
@@ -181,6 +188,38 @@ namespace BisonCorp
             tb_CodigoCliente.Text = string.Empty;
         }
 
+        private void dtg_fact_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            subtotal = 0;
+            foreach (DataGridViewRow row in dtg_fact.Rows)
+            {
+                if (row.Cells["Cantidad"].Value != null)
+                {
+                    subtotal = subtotal + Convert.ToInt32(row.Cells["Cantidad"].Value) * Convert.ToDouble(row.Cells["Precio por Unidad"].Value);
+                }
+            }
 
+            if (desc == 0)
+            {
+                total = subtotal + (subtotal * double.Parse(tb_imp_edit.Text));
+            }
+            else
+            {
+                total = subtotal + (subtotal * double.Parse(tb_imp_edit.Text));
+                total = total - (total * desc);
+            }
+
+            if (subtotal == 0)
+            {
+                lb_sub.Text = "0.00";
+                lb_total.Text = "0.00";
+            }
+            else
+            {
+                lb_sub.Text = subtotal.ToString();
+                lb_total.Text = total.ToString();
+            }
+
+        }
     }
 }

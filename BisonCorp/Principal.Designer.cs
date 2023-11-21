@@ -179,12 +179,15 @@
             // 
             // dtg_fact
             // 
+            dtg_fact.AllowUserToAddRows = false;
             dtg_fact.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtg_fact.Location = new Point(122, 57);
             dtg_fact.Name = "dtg_fact";
+            dtg_fact.ReadOnly = true;
             dtg_fact.RowTemplate.Height = 25;
             dtg_fact.Size = new Size(666, 235);
             dtg_fact.TabIndex = 2;
+            dtg_fact.RowsRemoved += dtg_fact_RowsRemoved;
             // 
             // tb_CodigoCliente
             // 
