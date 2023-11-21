@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             btn_cerrar = new Button();
             btn_eliminar = new Button();
             btn_modificar = new Button();
@@ -46,8 +47,11 @@
             groupBox1 = new GroupBox();
             label6 = new Label();
             dataGridView1 = new DataGridView();
+            errorProvider1 = new ErrorProvider(components);
+            bt_limpiar = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // btn_cerrar
@@ -96,6 +100,7 @@
             tb_nombre.Name = "tb_nombre";
             tb_nombre.Size = new Size(102, 23);
             tb_nombre.TabIndex = 4;
+            tb_nombre.Validating += tb_nombre_Validating;
             // 
             // tb_apellidos
             // 
@@ -103,6 +108,7 @@
             tb_apellidos.Name = "tb_apellidos";
             tb_apellidos.Size = new Size(102, 23);
             tb_apellidos.TabIndex = 5;
+            tb_apellidos.Validating += tb_apellidos_Validating;
             // 
             // tb_dni
             // 
@@ -110,6 +116,7 @@
             tb_dni.Name = "tb_dni";
             tb_dni.Size = new Size(102, 23);
             tb_dni.TabIndex = 6;
+            tb_dni.Validating += tb_dni_Validating;
             // 
             // tb_telefono
             // 
@@ -117,6 +124,7 @@
             tb_telefono.Name = "tb_telefono";
             tb_telefono.Size = new Size(102, 23);
             tb_telefono.TabIndex = 7;
+            tb_telefono.Validating += tb_telefono_Validating;
             // 
             // tb_contrasena
             // 
@@ -205,6 +213,8 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(12, 12);
             dataGridView1.Name = "dataGridView1";
@@ -212,11 +222,26 @@
             dataGridView1.Size = new Size(770, 264);
             dataGridView1.TabIndex = 16;
             // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
+            // bt_limpiar
+            // 
+            bt_limpiar.Location = new Point(588, 393);
+            bt_limpiar.Name = "bt_limpiar";
+            bt_limpiar.Size = new Size(97, 45);
+            bt_limpiar.TabIndex = 17;
+            bt_limpiar.Text = "Limpiar";
+            bt_limpiar.UseVisualStyleBackColor = true;
+            bt_limpiar.Click += bt_limpiar_Click;
+            // 
             // FormUsers
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(bt_limpiar);
             Controls.Add(dataGridView1);
             Controls.Add(groupBox1);
             Controls.Add(label4);
@@ -233,10 +258,10 @@
             Controls.Add(btn_cerrar);
             Name = "FormUsers";
             Text = "Usuarios";
-            Load += FormUsers_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -261,5 +286,7 @@
         private GroupBox groupBox1;
         private Label label6;
         private DataGridView dataGridView1;
+        private ErrorProvider errorProvider1;
+        private Button bt_limpiar;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             panel1 = new Panel();
             label1 = new Label();
             tb_contraseña = new TextBox();
@@ -36,7 +37,9 @@
             label3 = new Label();
             btn_entrar = new Button();
             btn_salir = new Button();
+            errorProvider1 = new ErrorProvider(components);
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -67,6 +70,7 @@
             tb_contraseña.Size = new Size(88, 23);
             tb_contraseña.TabIndex = 1;
             tb_contraseña.UseSystemPasswordChar = true;
+            tb_contraseña.Validating += tb_contraseña_Validating;
             // 
             // label2
             // 
@@ -83,6 +87,7 @@
             tb_usuario.Name = "tb_usuario";
             tb_usuario.Size = new Size(88, 23);
             tb_usuario.TabIndex = 3;
+            tb_usuario.Validating += tb_usuario_Validating;
             // 
             // label3
             // 
@@ -113,6 +118,10 @@
             btn_salir.UseVisualStyleBackColor = true;
             btn_salir.Click += btn_salir_Click;
             // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
             // Administrador
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -129,6 +138,7 @@
             Text = "Admin";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -143,5 +153,6 @@
         private Label label3;
         private Button btn_entrar;
         private Button btn_salir;
+        private ErrorProvider errorProvider1;
     }
 }

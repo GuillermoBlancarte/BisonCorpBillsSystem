@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             dataGridView1 = new DataGridView();
             label1 = new Label();
             tb_factura = new TextBox();
@@ -46,12 +47,16 @@
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
             Dup_RF = new DomainUpDown();
             groupBox1 = new GroupBox();
+            errorProvider1 = new ErrorProvider(components);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(12, 12);
             dataGridView1.Name = "dataGridView1";
@@ -75,6 +80,7 @@
             tb_factura.Name = "tb_factura";
             tb_factura.Size = new Size(102, 23);
             tb_factura.TabIndex = 21;
+            tb_factura.Validating += tb_factura_Validating;
             // 
             // btn_Facturar
             // 
@@ -112,6 +118,7 @@
             tb_nombre.Name = "tb_nombre";
             tb_nombre.Size = new Size(102, 23);
             tb_nombre.TabIndex = 31;
+            tb_nombre.Validating += tb_nombre_Validating;
             // 
             // label3
             // 
@@ -139,6 +146,7 @@
             tb_RFC.Name = "tb_RFC";
             tb_RFC.Size = new Size(102, 23);
             tb_RFC.TabIndex = 35;
+            tb_RFC.Validating += tb_RFC_Validating;
             // 
             // label5
             // 
@@ -166,6 +174,7 @@
             tb_Domicilio.Name = "tb_Domicilio";
             tb_Domicilio.Size = new Size(102, 23);
             tb_Domicilio.TabIndex = 39;
+            tb_Domicilio.Validating += tb_Domicilio_Validating;
             // 
             // label7
             // 
@@ -184,6 +193,7 @@
             Dup_CFDI.Size = new Size(102, 23);
             Dup_CFDI.TabIndex = 42;
             Dup_CFDI.Text = "CLAVE";
+            Dup_CFDI.Validating += Dup_CFDI_Validating;
             // 
             // sqlCommand1
             // 
@@ -197,6 +207,7 @@
             Dup_RF.Size = new Size(102, 23);
             Dup_RF.TabIndex = 43;
             Dup_RF.Text = "CLAVE";
+            Dup_RF.Validating += Dup_RF_Validating;
             // 
             // groupBox1
             // 
@@ -218,6 +229,10 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Información Requerida:";
             // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
             // FormInovice
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -234,6 +249,7 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -258,5 +274,6 @@
         private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
         private DomainUpDown Dup_RF;
         private GroupBox groupBox1;
+        private ErrorProvider errorProvider1;
     }
 }

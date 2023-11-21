@@ -31,6 +31,11 @@ namespace Negocio
             return cn.ConsultaFacturas();
         }
 
+        public DataTable ConsultaCL()
+        {
+            return cn.ConsultaClientes();
+        }
+
         public DataTable DatosFacturacion(int id)
         {
             return cn.Facturacion(id);
@@ -41,19 +46,40 @@ namespace Negocio
             return cn.InsertarUsuario(nom, apel, dni, tel, user, pass);
         }
 
+        public int InsertarCliente(string nom, string apel, string tel, string correo, string codigo, float dec, int cant)
+        {
+            return cn.InsertarCliente(nom, apel, tel, correo, codigo, dec, cant);
+        }
+
         public int ModificarUsuario(string nom, string apel, string dni, string tel, string user, string pass)
         {
             return cn.ModificarUsuario(nom, apel, dni, tel, user, pass);
         }
+
+        public int ModificarCliente(string nom, string apel, string codigo, string tel, string correo, float desc)
+        {
+            return cn.ModificarCliente(nom, apel, codigo, tel, correo, desc);
+        }
+
 
         public int EliminarUsuario(string dni)
         {
             return cn.EliminarUsuario(dni);
         }
 
+        public int EliminarCliente(string codigo)
+        {
+            return cn.EliminarCliente(codigo);
+        }
+
         public bool UsuarioExistente(string dni)
         {
             return cn.UsuarioExistente(dni);
+        }
+
+        public bool ClienteExistente(string codigo)
+        {
+            return cn.ClienteExistente(codigo);
         }
 
         public string consultaFactura()

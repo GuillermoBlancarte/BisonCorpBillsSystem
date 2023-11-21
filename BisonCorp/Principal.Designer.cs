@@ -65,6 +65,7 @@
             label11 = new Label();
             tb_Cliente = new TextBox();
             printDocument1 = new System.Drawing.Printing.PrintDocument();
+            bt_ReiniciarCodigo = new Button();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtg_fact).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -174,6 +175,7 @@
             clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
             clienteToolStripMenuItem.Size = new Size(61, 21);
             clienteToolStripMenuItem.Text = "Cliente";
+            clienteToolStripMenuItem.Click += clienteToolStripMenuItem_Click;
             // 
             // dtg_fact
             // 
@@ -385,11 +387,22 @@
             // 
             printDocument1.PrintPage += Imprimir;
             // 
+            // bt_ReiniciarCodigo
+            // 
+            bt_ReiniciarCodigo.Location = new Point(12, 207);
+            bt_ReiniciarCodigo.Name = "bt_ReiniciarCodigo";
+            bt_ReiniciarCodigo.Size = new Size(104, 23);
+            bt_ReiniciarCodigo.TabIndex = 25;
+            bt_ReiniciarCodigo.Text = "Limpiar Cliente";
+            bt_ReiniciarCodigo.UseVisualStyleBackColor = true;
+            bt_ReiniciarCodigo.Click += bt_ReiniciarCodigo_Click;
+            // 
             // Principal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(bt_ReiniciarCodigo);
             Controls.Add(label11);
             Controls.Add(tb_Cliente);
             Controls.Add(pictureBox1);
@@ -465,5 +478,6 @@
         private ToolStripTextBox tb_desc_edit;
         private ToolStripMenuItem clienteToolStripMenuItem;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private Button bt_ReiniciarCodigo;
     }
 }

@@ -49,6 +49,17 @@ namespace Datos
             return tabla;
         }
 
+        public DataTable ConsultaClientes()
+        {
+            string query = "select * from Clientes";
+            SqlCommand sql = new SqlCommand(query, con);
+            SqlDataAdapter data = new SqlDataAdapter(sql);
+            DataTable tabla = new DataTable();
+            data.Fill(tabla);
+
+            return tabla;
+        }
+
         public DataTable Facturacion(int id)
         {
             string query = "select * from Facturacion where NumFactura = "+id;
@@ -71,12 +82,34 @@ namespace Datos
             return flag;
         }
 
+        public int InsertarCliente(string nom, string apel, string tel, string correo, string codigo, float dec, int cant)
+        {
+            int flag = 0;
+            con.Open();
+            string query = "insert into Clientes values ('" + nom + "','" + apel + "','" + tel + "','" + correo + "','" + codigo + "'," + dec + "," + cant + ")";
+            SqlCommand cmd = new SqlCommand(query, con);
+            flag = cmd.ExecuteNonQuery();
+            con.Close();
+            return flag;
+        }
+
         public int ModificarUsuario(string nom, string apel, string dni, string tel, string user, string pass)
         {
             int flag = 0;
             con.Open() ;
-            string query = "Update Persona set nombre = '" + nom + "', apellidos = '" + apel + "',telefono = '" + tel + "',usuario ='" + user + "',contrasena = " + pass+ "' where dni = '"+ dni + "'";
+            string query = "Update Persona set nombre = '" + nom + "', apellidos = '" + apel + "',telefono = '" + tel + "',usuario ='" + user + "',contrasena = '" + pass+ "' where dni = '"+ dni + "'";
             SqlCommand cmd = new SqlCommand(query,con);
+            flag = cmd.ExecuteNonQuery();
+            con.Close();
+            return flag;
+        }
+
+        public int ModificarCliente(string nom, string apel, string codigo, string tel, string correo, float desc)
+        {
+            int flag = 0;
+            con.Open();
+            string query = "Update Clientes set Nombre = '" + nom + "', Apellido = '" + apel + "',Telefono = '" + tel + "',Correo ='" + correo + "',Descuento = " + desc + " where Codigo = '" + codigo + "'";
+            SqlCommand cmd = new SqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
             con.Close();
             return flag;
@@ -87,6 +120,18 @@ namespace Datos
             int flag = 0;
             con.Open();
             string query = "Delete from Persona where dni = '" + dni + "'";
+            SqlCommand cmd = new SqlCommand(query, con);
+            flag = cmd.ExecuteNonQuery();
+            con.Close();
+            return flag;
+
+        }
+
+        public int EliminarCliente(string codigo)
+        {
+            int flag = 0;
+            con.Open();
+            string query = "Delete from Clientes where Codigo = '" + codigo + "'";
             SqlCommand cmd = new SqlCommand(query, con);
             flag = cmd.ExecuteNonQuery();
             con.Close();
@@ -109,6 +154,20 @@ namespace Datos
             //contador = Convert.ToInt32(cmd.ExecuteScalar());
             con.Close() ;
             return contador > 0;                
+        }
+
+        public bool ClienteExistente(string codigo)
+        {
+            int contador;
+            con.Open();
+            string query = "Select count(*) from Clientes where Codigo = @Codigo";
+            using(SqlCommand cmd = new SqlCommand (query, con))
+            {
+                cmd.Parameters.AddWithValue("@Codigo", codigo);
+                contador = (int)cmd.ExecuteScalar();
+            }
+            con.Close() ;
+            return contador > 0;
         }
 
         public string consultafactura()

@@ -54,6 +54,14 @@ namespace BisonCorp
             this.Show();
         }
 
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Clientes clientes = new Clientes();
+            this.Hide();
+            clientes.ShowDialog();
+            this.Show();
+        }
+
         private void ImpYDescCambio(object sender, EventArgs e)
         {
             tb_imp.Text = tb_imp_edit.Text;
@@ -166,5 +174,13 @@ namespace BisonCorp
             v1.ShowDialog();
             this.Show();
         }
+
+        private void bt_ReiniciarCodigo_Click(object sender, EventArgs e)
+        {
+            tb_Cliente.Text = string.Empty;
+            tb_CodigoCliente.Text = string.Empty;
+        }
+
+
     }
 }

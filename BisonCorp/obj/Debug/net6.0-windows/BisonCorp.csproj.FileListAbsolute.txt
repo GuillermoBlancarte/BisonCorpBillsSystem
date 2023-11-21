@@ -88,3 +88,5 @@ C:\Users\user\source\repos\BisonCorp\bin\Debug\net6.0-windows\Microsoft.Extensio
 C:\Users\user\source\repos\BisonCorp\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 C:\Users\user\source\repos\BisonCorp\bin\Debug\net6.0-windows\BouncyCastle.Cryptography.dll
 C:\Users\user\source\repos\BisonCorp\bin\Debug\net6.0-windows\itext.bouncy-castle-adapter.dll
+C:\Users\user\source\repos\BisonCorp\obj\Debug\net6.0-windows\BisonCorp.Properties.Resources.resources
+C:\Users\user\source\repos\BisonCorp\obj\Debug\net6.0-windows\BisonCorp.Clientes.resources
