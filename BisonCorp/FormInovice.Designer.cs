@@ -80,7 +80,7 @@
             tb_factura.Location = new Point(12, 364);
             tb_factura.Name = "tb_factura";
             tb_factura.Size = new Size(102, 23);
-            tb_factura.TabIndex = 21;
+            tb_factura.TabIndex = 19;
             tb_factura.Validating += tb_factura_Validating;
             // 
             // btn_Facturar
@@ -88,7 +88,7 @@
             btn_Facturar.Location = new Point(12, 393);
             btn_Facturar.Name = "btn_Facturar";
             btn_Facturar.Size = new Size(102, 45);
-            btn_Facturar.TabIndex = 20;
+            btn_Facturar.TabIndex = 18;
             btn_Facturar.Text = "Facturar";
             btn_Facturar.UseVisualStyleBackColor = true;
             btn_Facturar.Click += btn_Facturar_Click;
@@ -118,7 +118,7 @@
             tb_nombre.Location = new Point(15, 44);
             tb_nombre.Name = "tb_nombre";
             tb_nombre.Size = new Size(102, 23);
-            tb_nombre.TabIndex = 31;
+            tb_nombre.TabIndex = 20;
             tb_nombre.Validating += tb_nombre_Validating;
             // 
             // label3
@@ -146,7 +146,7 @@
             tb_RFC.Location = new Point(231, 44);
             tb_RFC.Name = "tb_RFC";
             tb_RFC.Size = new Size(102, 23);
-            tb_RFC.TabIndex = 35;
+            tb_RFC.TabIndex = 22;
             tb_RFC.Validating += tb_RFC_Validating;
             // 
             // label5
@@ -174,7 +174,7 @@
             tb_Domicilio.Location = new Point(447, 44);
             tb_Domicilio.Name = "tb_Domicilio";
             tb_Domicilio.Size = new Size(102, 23);
-            tb_Domicilio.TabIndex = 39;
+            tb_Domicilio.TabIndex = 24;
             tb_Domicilio.Validating += tb_Domicilio_Validating;
             // 
             // label7
@@ -192,7 +192,7 @@
             Dup_CFDI.Location = new Point(339, 45);
             Dup_CFDI.Name = "Dup_CFDI";
             Dup_CFDI.Size = new Size(102, 23);
-            Dup_CFDI.TabIndex = 42;
+            Dup_CFDI.TabIndex = 23;
             Dup_CFDI.Text = "CLAVE";
             Dup_CFDI.Validating += Dup_CFDI_Validating;
             // 
@@ -206,7 +206,7 @@
             Dup_RF.Location = new Point(123, 44);
             Dup_RF.Name = "Dup_RF";
             Dup_RF.Size = new Size(102, 23);
-            Dup_RF.TabIndex = 43;
+            Dup_RF.TabIndex = 21;
             Dup_RF.Text = "CLAVE";
             Dup_RF.Validating += Dup_RF_Validating;
             // 

@@ -69,7 +69,7 @@
             btn_eliminar.Location = new Point(278, 393);
             btn_eliminar.Name = "btn_eliminar";
             btn_eliminar.Size = new Size(127, 45);
-            btn_eliminar.TabIndex = 1;
+            btn_eliminar.TabIndex = 2;
             btn_eliminar.Text = "Eliminar Usuario";
             btn_eliminar.UseVisualStyleBackColor = true;
             btn_eliminar.Click += btn_eliminar_Click;
@@ -79,7 +79,7 @@
             btn_modificar.Location = new Point(145, 393);
             btn_modificar.Name = "btn_modificar";
             btn_modificar.Size = new Size(127, 45);
-            btn_modificar.TabIndex = 2;
+            btn_modificar.TabIndex = 3;
             btn_modificar.Text = "Modificar Usuario";
             btn_modificar.UseVisualStyleBackColor = true;
             btn_modificar.Click += btn_modificar_Click;
@@ -89,7 +89,7 @@
             btn_añadir.Location = new Point(12, 393);
             btn_añadir.Name = "btn_añadir";
             btn_añadir.Size = new Size(127, 45);
-            btn_añadir.TabIndex = 3;
+            btn_añadir.TabIndex = 4;
             btn_añadir.Text = "Nuevo Usuario";
             btn_añadir.UseVisualStyleBackColor = true;
             btn_añadir.Click += btn_añadir_Click;
@@ -99,7 +99,7 @@
             tb_nombre.Location = new Point(12, 347);
             tb_nombre.Name = "tb_nombre";
             tb_nombre.Size = new Size(102, 23);
-            tb_nombre.TabIndex = 4;
+            tb_nombre.TabIndex = 5;
             tb_nombre.Validating += tb_nombre_Validating;
             // 
             // tb_apellidos
@@ -107,7 +107,7 @@
             tb_apellidos.Location = new Point(131, 347);
             tb_apellidos.Name = "tb_apellidos";
             tb_apellidos.Size = new Size(102, 23);
-            tb_apellidos.TabIndex = 5;
+            tb_apellidos.TabIndex = 6;
             tb_apellidos.Validating += tb_apellidos_Validating;
             // 
             // tb_dni
@@ -115,7 +115,7 @@
             tb_dni.Location = new Point(250, 347);
             tb_dni.Name = "tb_dni";
             tb_dni.Size = new Size(102, 23);
-            tb_dni.TabIndex = 6;
+            tb_dni.TabIndex = 7;
             tb_dni.Validating += tb_dni_Validating;
             // 
             // tb_telefono
@@ -123,7 +123,7 @@
             tb_telefono.Location = new Point(370, 347);
             tb_telefono.Name = "tb_telefono";
             tb_telefono.Size = new Size(102, 23);
-            tb_telefono.TabIndex = 7;
+            tb_telefono.TabIndex = 8;
             tb_telefono.Validating += tb_telefono_Validating;
             // 
             // tb_contrasena
@@ -131,7 +131,7 @@
             tb_contrasena.Location = new Point(175, 53);
             tb_contrasena.Name = "tb_contrasena";
             tb_contrasena.Size = new Size(127, 23);
-            tb_contrasena.TabIndex = 8;
+            tb_contrasena.TabIndex = 10;
             // 
             // tb_usuario
             // 
@@ -232,7 +232,7 @@
             bt_limpiar.Location = new Point(588, 393);
             bt_limpiar.Name = "bt_limpiar";
             bt_limpiar.Size = new Size(97, 45);
-            bt_limpiar.TabIndex = 17;
+            bt_limpiar.TabIndex = 1;
             bt_limpiar.Text = "Limpiar";
             bt_limpiar.UseVisualStyleBackColor = true;
             bt_limpiar.Click += bt_limpiar_Click;

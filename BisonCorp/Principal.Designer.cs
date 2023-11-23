@@ -76,7 +76,7 @@
             btn_cerrar.Location = new Point(713, 415);
             btn_cerrar.Name = "btn_cerrar";
             btn_cerrar.Size = new Size(75, 23);
-            btn_cerrar.TabIndex = 0;
+            btn_cerrar.TabIndex = 9;
             btn_cerrar.Text = "Cerrar";
             btn_cerrar.UseVisualStyleBackColor = true;
             btn_cerrar.Click += btn_cerrar_Click;
@@ -186,7 +186,7 @@
             dtg_fact.ReadOnly = true;
             dtg_fact.RowTemplate.Height = 25;
             dtg_fact.Size = new Size(666, 235);
-            dtg_fact.TabIndex = 2;
+            dtg_fact.TabIndex = 8;
             dtg_fact.RowsRemoved += dtg_fact_RowsRemoved;
             // 
             // tb_CodigoCliente
@@ -194,14 +194,14 @@
             tb_CodigoCliente.Location = new Point(12, 149);
             tb_CodigoCliente.Name = "tb_CodigoCliente";
             tb_CodigoCliente.Size = new Size(104, 23);
-            tb_CodigoCliente.TabIndex = 3;
+            tb_CodigoCliente.TabIndex = 1;
             // 
             // bt_buscarCliente
             // 
             bt_buscarCliente.Location = new Point(12, 178);
             bt_buscarCliente.Name = "bt_buscarCliente";
             bt_buscarCliente.Size = new Size(104, 23);
-            bt_buscarCliente.TabIndex = 4;
+            bt_buscarCliente.TabIndex = 2;
             bt_buscarCliente.Text = "Buscar";
             bt_buscarCliente.UseVisualStyleBackColor = true;
             bt_buscarCliente.Click += bt_buscarCliente_Click;
@@ -230,7 +230,7 @@
             tb_CodigoProducto.Location = new Point(405, 325);
             tb_CodigoProducto.Name = "tb_CodigoProducto";
             tb_CodigoProducto.Size = new Size(126, 23);
-            tb_CodigoProducto.TabIndex = 7;
+            tb_CodigoProducto.TabIndex = 4;
             // 
             // label2
             // 
@@ -302,7 +302,7 @@
             button3.Location = new Point(658, 317);
             button3.Name = "button3";
             button3.Size = new Size(130, 83);
-            button3.TabIndex = 15;
+            button3.TabIndex = 7;
             button3.Text = "Facturar";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
@@ -312,7 +312,7 @@
             tb_Cantidad.Location = new Point(537, 325);
             tb_Cantidad.Name = "tb_Cantidad";
             tb_Cantidad.Size = new Size(115, 23);
-            tb_Cantidad.TabIndex = 16;
+            tb_Cantidad.TabIndex = 5;
             // 
             // label8
             // 
@@ -395,7 +395,7 @@
             bt_ReiniciarCodigo.Location = new Point(12, 207);
             bt_ReiniciarCodigo.Name = "bt_ReiniciarCodigo";
             bt_ReiniciarCodigo.Size = new Size(104, 23);
-            bt_ReiniciarCodigo.TabIndex = 25;
+            bt_ReiniciarCodigo.TabIndex = 3;
             bt_ReiniciarCodigo.Text = "Limpiar Cliente";
             bt_ReiniciarCodigo.UseVisualStyleBackColor = true;
             bt_ReiniciarCodigo.Click += bt_ReiniciarCodigo_Click;

@@ -93,7 +93,7 @@
             tb_telefono.Location = new Point(6, 53);
             tb_telefono.Name = "tb_telefono";
             tb_telefono.Size = new Size(127, 23);
-            tb_telefono.TabIndex = 9;
+            tb_telefono.TabIndex = 25;
             tb_telefono.Validating += tb_telefono_Validating;
             // 
             // label5
@@ -110,7 +110,7 @@
             tb_correo.Location = new Point(175, 53);
             tb_correo.Name = "tb_correo";
             tb_correo.Size = new Size(127, 23);
-            tb_correo.TabIndex = 8;
+            tb_correo.TabIndex = 26;
             tb_correo.Validating += tb_correo_Validating;
             // 
             // label4
@@ -220,7 +220,7 @@
             btn_cerrar.Location = new Point(691, 393);
             btn_cerrar.Name = "btn_cerrar";
             btn_cerrar.Size = new Size(97, 45);
-            btn_cerrar.TabIndex = 17;
+            btn_cerrar.TabIndex = 16;
             btn_cerrar.Text = "Cerrar";
             btn_cerrar.UseVisualStyleBackColor = true;
             btn_cerrar.Click += btn_cerrar_Click_1;
@@ -234,7 +234,7 @@
             button1.Location = new Point(588, 393);
             button1.Name = "button1";
             button1.Size = new Size(97, 45);
-            button1.TabIndex = 31;
+            button1.TabIndex = 17;
             button1.Text = "Limpiar";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;

@@ -12,7 +12,8 @@ namespace Datos
     public class ConexionSQL
     {
         //static string conexionstring = "server= localhost; database= Administracion;" + "integrated security= true";
-        static string conexionstring = "Data Source=DESKTOP-5J4G6PL;Initial Catalog=Administracion;Integrated Security=True";
+        //static string conexionstring = "Data Source=DESKTOP-5J4G6PL;Initial Catalog=Administracion;Integrated Security=True";
+        static string conexionstring = "Data Source=.;Initial Catalog=Administracion;Integrated Security=True";
         SqlConnection con = new SqlConnection(conexionstring);
 
         public int consultalogin(string usuario, string contrasena)

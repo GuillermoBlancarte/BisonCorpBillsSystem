@@ -68,7 +68,7 @@
             tb_contraseña.Location = new Point(181, 120);
             tb_contraseña.Name = "tb_contraseña";
             tb_contraseña.Size = new Size(88, 23);
-            tb_contraseña.TabIndex = 1;
+            tb_contraseña.TabIndex = 2;
             tb_contraseña.UseSystemPasswordChar = true;
             tb_contraseña.Validating += tb_contraseña_Validating;
             // 
@@ -86,7 +86,7 @@
             tb_usuario.Location = new Point(181, 59);
             tb_usuario.Name = "tb_usuario";
             tb_usuario.Size = new Size(88, 23);
-            tb_usuario.TabIndex = 3;
+            tb_usuario.TabIndex = 1;
             tb_usuario.Validating += tb_usuario_Validating;
             // 
             // label3
@@ -103,7 +103,7 @@
             btn_entrar.Location = new Point(121, 169);
             btn_entrar.Name = "btn_entrar";
             btn_entrar.Size = new Size(75, 23);
-            btn_entrar.TabIndex = 5;
+            btn_entrar.TabIndex = 3;
             btn_entrar.Text = "Entrar";
             btn_entrar.UseVisualStyleBackColor = true;
             btn_entrar.Click += btn_entrar_Click;
@@ -113,7 +113,7 @@
             btn_salir.Location = new Point(256, 169);
             btn_salir.Name = "btn_salir";
             btn_salir.Size = new Size(75, 23);
-            btn_salir.TabIndex = 6;
+            btn_salir.TabIndex = 4;
             btn_salir.Text = "Salir";
             btn_salir.UseVisualStyleBackColor = true;
             btn_salir.Click += btn_salir_Click;
